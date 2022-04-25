@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Abpro2 Grupal</title>
+
+  <!-- Custom fonts for this theme -->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  
+  <!-- Theme CSS -->
+  <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/patricio.css' %}" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Tutorial Django</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Tutorial</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+
+      <!-- Masthead Avatar Image -->
+      <img class="masthead-avatar mb-5" src="static/img/pollito.jpg" alt="">
+
+      <!-- Masthead Heading -->
+      <h1 class="masthead-heading text-uppercase mb-0">Ejercicio Grupal 2</h1>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-0">Web con Django</p>
+
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+
+      <!-- About Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-white">Tutorial</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Tutorial revisar versiones-->
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <p class="lead">1. Después de crear un entorno virtual e instalar Django. <br>
+            Verifique la versión de Python y Django.</p>
+        </div>
+        <div class="col-lg-5 mr-auto">
+          <img class="img-fluid" src="static/img/1versiones.png" alt="">
+        </div>
+      </div>
+
+      <hr/>
+
+        <!-- Tutorial crear aplicacion e incluirla en settings-->
+        <div class="row">
+          <div class="col-lg-5 ml-auto">
+          <p class="lead">2. Se crea la aplicación con django-admin<br>
+            (venv) D:\Escritorio\proyecto-modulo-6\abpro1-mod6\abpro1>django-admin startapp aplicación<br>
+            En Settings se agrega en listado la aplicación # Application definition.</p>
+          </div>
+          <div class="col-lg-5 mr-auto">
+            <img class="img-fluid" src="static/img/3tuto.png" alt="">
+          </div>
+        </div>
+  
+        <hr/>
+      
+      <!-- Tutorial crear carpeta Templates\aplicacion1 y archivo html-->
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <p class="lead">Se crea una carpeta dentro de aplicaciones llamada templates\aplicacion1 y dentro un archivo index.html</p>
+        </div>
+      <div class="col-lg-5 mr-auto">
+          <img class="img-fluid" src="static/img/4tuto.png" alt="" >
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- Tutorial crear carpeta Templates\aplicacion1 y archivo html-->
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <p class="lead">Se modifica urls.py en línea  17 , include y en la línea 21 con path('',include('aplicacion1.urls'))</p>
+        </div>
+      <div class="col-lg-5 mr-auto">
+          <img class="img-fluid" src="static/img/5tuto.png" alt="" >
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- Tutorial en la aplicación creas archivo urls.py-->
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <p class="lead">En la aplicación se agrega un archivo urls.py y se modifica<br>
+              A.	Se borra la línea from django.contrib import admin <br>
+              B.	En línea dos se agrega  from . import views <br>
+              C.	Y para nuestro primer proyecto se agregan las líneas <br>
+                  urlpatterns = [ <br>
+    	            path('',views.inicio, name='inicio'), <br>
+    	            path('contactos/',views.contacto,name='contactos'), ]
+          </p>
+        </div>
+      <div class="col-lg-5 mr-auto">
+          <img class="img-fluid" src="static/img/6tuto.png" alt="" >
+        </div>
+      </div>
+
+      <hr/>    
+
+      <!-- Tutorial en la aplicación se modifica views.py-->
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <p class="lead">En las carpetas de la aplicación. Se modifica viesw.py<br>
+            from django.http import HttpResponse<br>
+            from django.shortcuts import render<br>
+            # Create your views here.<br>
+              def index (request):<br>
+                return HttpResponse('“Bienvenidos a TeLoVendo"')
+          </p>
+        </div>
+      <div class="col-lg-5 mr-auto">
+          <img class="img-fluid" src="static/img/7tuto.png" alt="" >
+        </div>
+      </div>
+
+      <hr/> 
+
+      <!-- Tutorial agregar html contactos-->
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <p class="lead">Se agrega una página html de contactos</p>
+        </div>
+      <div class="col-lg-5 mr-auto">
+          <img class="img-fluid" src="static/img/8tuto.png" alt="" >
+        </div>
+      </div>
+
+      <hr/> 
+      	
+      <!-- Tutorial se agrega a views.py de la aplicacion1-->
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <p class="lead">Se agrega a views.py de la aplicacion1</p>
+        </div>
+      <div class="col-lg-5 mr-auto">
+          <img class="img-fluid" src="static/img/9tuto.png" alt="" >
+        </div>
+      </div>
+
+      <hr/> 
+
+      <!-- Tutorial se agrega a views.py de la aplicacion1-->
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <p class="lead">Se levanta finalmente el Servidor Local<br>
+            (venv) PS D:\Escritorio\proyecto-modulo-6\abpro1-mod6\abpro1> py manage.py runserver</p>
+        </div>
+      <div class="col-lg-5 mr-auto">
+          <img class="img-fluid" src="static/img/10tuto.png" alt="" >
+        </div>
+      </div>
+
+      <hr/> 
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+
+        <!-- Footer Location -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Putaendo</h4>
+          <p class="lead mb-0">Rinconada de Silva
+            <br>Chile</p>
+        </div>
+
+        <!-- Footer Redes Sociales -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Redes Sociales</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-facebook-f"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-twitter"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-linkedin-in"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-dribbble"></i>
+          </a>
+        </div>
+
+        <!-- Footer Sección Izquierda -->
+        <div class="col-lg-4">
+          <h4 class="text-uppercase mb-4">Alumna Patricia Olivares Delgado</h4>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright Section -->
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Copyright &copy; Your Website 2022</small>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+ 
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'js/contact_me.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/freelancer.min.js' %}"></script>
+
+</body>
+
+</html>
